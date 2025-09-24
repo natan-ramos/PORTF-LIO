@@ -157,3 +157,59 @@ footer a:hover {
         padding: 1rem;
     }
 }
+/* Estilos para o Formulário de Contato */
+#contato {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho total do elemento */
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#contato button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contato button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
