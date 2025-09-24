@@ -86,3 +86,32 @@ footer a {
 footer a:hover {
     color: #0056b3;
 }
+/* Estilos Responsivos para telas menores que 600px */
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* Ocupa 100% da largura da tela */
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    header {
+        padding: 1rem 0; /* Espaçamento menor no celular */
+    }
+    
+    header h1 {
+        font-size: 1.8em; /* Fonte menor para o título */
+    }
+
+    header p {
+        font-size: 0.9em; /* Fonte menor para o subtítulo */
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
