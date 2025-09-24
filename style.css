@@ -1,11 +1,32 @@
 /* Estilos Gerais do Body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e9ebee; /* Cor de fundo mais suave */
-    color: #444; /* Cor de texto mais escura */
+    color: var(--text-color);
+    background-color: var(--background-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Variáveis para o Tema Claro (Padrão) */
+:root {
+    --background-color: #e9ebee;
+    --card-background: #fff;
+    --text-color: #444;
+    --primary-color: #007bff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Variáveis para o Tema Escuro */
+body.dark-mode {
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --primary-color: #61dafb;
+    --border-color: #333;
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Estilos para o Conteúdo Principal */
@@ -13,35 +34,54 @@ body {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: var(--card-background);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 /* Estilos do Cabeçalho */
 header {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--border-color);
 }
 
 header img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    border: 5px solid #007bff; /* Borda da cor principal */
+    border: 5px solid var(--primary-color);
     object-fit: cover;
 }
 
 header h1 {
     margin: 10px 0;
     font-size: 2.8em;
-    color: #222;
+    color: var(--text-color);
 }
 
 header p {
-    color: #666;
+    color: var(--text-color);
     font-style: italic;
+}
+
+/* Estilos do Botão */
+#theme-toggle {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
 }
 
 /* Estilos para as Seções */
@@ -50,60 +90,62 @@ section {
 }
 
 h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
 
-/* Estilos para a Lista de Habilidades e Rodapé */
 ul {
     list-style: none;
     padding: 0;
 }
 
 li {
-    background: #f0f8ff;
+    background: var(--card-background);
+    color: var(--text-color);
     margin-bottom: 8px;
     padding: 10px;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid var(--primary-color);
     border-radius: 4px;
 }
 
+/* Estilos do Rodapé */
 footer {
     text-align: center;
     padding-top: 20px;
-    color: #888;
+    color: var(--text-color);
 }
 
 footer a {
-    color: #007bff;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #0056b3;
+    color: var(--primary-color);
 }
-/* Estilos Responsivos para telas menores que 600px */
+
+/* Estilos Responsivos (para telas menores que 600px) */
 @media (max-width: 600px) {
     .container {
-        width: 100%; /* Ocupa 100% da largura da tela */
+        width: 100%;
         padding: 10px;
         margin: 10px auto;
     }
 
     header {
-        padding: 1rem 0; /* Espaçamento menor no celular */
+        padding: 1rem 0;
     }
     
     header h1 {
-        font-size: 1.8em; /* Fonte menor para o título */
+        font-size: 1.8em;
     }
 
     header p {
-        font-size: 0.9em; /* Fonte menor para o subtítulo */
+        font-size: 0.9em;
     }
 
     header img {
