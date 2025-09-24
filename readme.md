@@ -11,7 +11,7 @@ Olá! Este é o meu primeiro projeto de portfólio, criado para demonstrar meus 
 ## 💻 Como Acessar
 
 Você pode visualizar este projeto online através do link:
-https://github.com/natan-ramos/PORTF-LIO
+https://natan-ramos.github.io/PORTF-LIO/
 
 ## 📌 Status do Projeto
 
