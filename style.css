@@ -1,77 +1,88 @@
-/* Estilos Gerais */
+/* Estilos Gerais do Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ebee; /* Cor de fundo mais suave */
+    color: #444; /* Cor de texto mais escura */
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Estilos do Cabeçalho (Header) */
+/* Estilos para o Conteúdo Principal */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do Cabeçalho */
 header {
-    background: #333;
-    color: #fff;
-    padding: 2rem 0;
     text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
 }
 
 header img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    border: 4px solid #fff;
-    margin-bottom: 1rem;
+    border: 5px solid #007bff; /* Borda da cor principal */
+    object-fit: cover;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    margin: 10px 0;
+    font-size: 2.8em;
+    color: #222;
 }
 
-/* Estilos das Seções Principais */
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
+header p {
+    color: #666;
+    font-style: italic;
 }
 
+/* Estilos para as Seções */
 section {
-    background: #fff;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
 }
 
 h2 {
     color: #007bff;
     border-bottom: 2px solid #007bff;
-    padding-bottom: 0.5rem;
-    margin-top: 0;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
+/* Estilos para a Lista de Habilidades e Rodapé */
 ul {
     list-style: none;
     padding: 0;
 }
 
-/* Estilos do Rodapé (Footer) */
+li {
+    background: #f0f8ff;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    border-radius: 4px;
+}
+
 footer {
-    background: #333;
-    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    padding-top: 20px;
+    color: #888;
 }
 
 footer a {
-    color: #fff;
+    color: #007bff;
     text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #007bff;
+    color: #0056b3;
 }
